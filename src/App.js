@@ -8,6 +8,7 @@ function App() {
 
   const [array, setArray] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null)
+  const [isOver, setIsOver] = useState(false);
 
   useEffect(() => {
     reset()
@@ -17,16 +18,14 @@ function App() {
     const { trades } = mergeSort({ arr: array, count: 0, trades: [] })
     let count = 0;
     let temp = [...array];
-    console.log(array)
 
     const interval = setInterval(() => {
       if (count >= trades.length) {
-        console.log('cabou')
+        setIsOver(true);
         clearInterval(interval)
       } else {
         setSelectedUser(count % 3);
         temp = swap(temp, trades[count][0], trades[count][1])
-        console.log(temp)
         setArray(temp)
         count++;
       }
@@ -34,6 +33,7 @@ function App() {
   }
 
   function reset() {
+    setIsOver(false);
     setSelectedUser(null);
     setArray(generateArray())
   }
@@ -60,6 +60,9 @@ function App() {
       <button onClick={reset}>
         reset
       </button>
+      {
+        isOver && <p>Acabou!</p>
+      }
     </div>
   );
 }
