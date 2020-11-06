@@ -8,11 +8,16 @@ export default function merge(a, b) {
     while(i < a.arr.length && j < b.arr.length) {
         if(a.arr[i] > b.arr[j]) {
             temp.push(b.arr[j]);
-            for (let z = 0; z < a.arr.length - i; z++) {
-                trades.push([a.arr[a.arr.length - i - z - 1], b.arr[j]])
+            const qtdTrades = a.arr.length - i;
+            count += qtdTrades;
+            if (qtdTrades > 1) {
+                for(let z = 0; z < qtdTrades; z++) {
+                    trades.push([a.arr[a.arr.length - 1 - z], b.arr[j]])
+                }
+            } else {
+                trades.push([a.arr[a.arr.length - 1], b.arr[j]])
             }
             j++;
-            count += a.arr.length - i;
         } else {
             temp.push(a.arr[i]);
             i++;
