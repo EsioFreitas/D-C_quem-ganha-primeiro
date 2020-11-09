@@ -80,9 +80,9 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="row">
+        <div className="row ">
           <div className="col">
-            <ul className="list-users d-flex justify-content-around">
+            <ul className="list-users d-flex justify-content-around mb-5 pb-5">
               <li
                 style={
                   selectedUser === 0
@@ -112,8 +112,14 @@ function App() {
               </li>
             </ul>
 
-            <button onClick={solveProblem}>Resolver</button>
-            <button onClick={reset}>reset</button>
+            <div className="d-flex justify-content-center">
+              <button onClick={solveProblem} className="btn mr-5">
+                Resolver
+              </button>
+              <button onClick={reset} className="btn">
+                reset
+              </button>
+            </div>
             {isOver && <p>Acabou!</p>}
           </div>
         </div>

@@ -18,6 +18,13 @@ li {
 
 .list-users li {
   text-transform: uppercase;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-size: 1.3rem;
+}
+
+.btn {
+  background-color: red;
+  padding: 1rem 10rem;
+  border-radius: 2rem;
+  box-shadow: none;
 }
