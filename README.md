@@ -25,7 +25,7 @@ Sua missão, caso decida aceitá-la, é determinar quem ganha o jogo, dada a seq
 
 **Linguagem**: JavaScript<br>
 
-Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://viagemanegocios.netlify.app/).
+Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://quem-ganha.netlify.app/).
 No entanto, caso queira rodá-la, é necessário que possua instalado:
 
 - [Node](https://nodejs.org/en/) e
