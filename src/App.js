@@ -45,7 +45,7 @@ function App() {
     <div className="bg-light" style={{ height: "100vh" }}>
       <div className="container">
         <div className="text-center pt-4" style={{ color: "#353535" }}>
-          <h1 className="mb-3">
+          <h1 className="mb-4">
             Projeto <span className="bold-text">Viagem a Trabalho</span>{" "}
           </h1>
           <p>
@@ -82,7 +82,7 @@ function App() {
         </div>
         <div className="row">
           <div className="col">
-            <ul>
+            <ul className="list-users d-flex justify-content-around">
               <li
                 style={
                   selectedUser === 0
