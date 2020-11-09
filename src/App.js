@@ -72,35 +72,52 @@ function App() {
           </p>
         </div>
         <div className="row">
-          <div className="col-6">ab</div>
-          <div className="col-6">b</div>
+          <div className="col">
+            <ul>
+              {array.map((number) => (
+                <li>{number}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <ul>
+              <li
+                style={
+                  selectedUser === 0
+                    ? { color: "red", fontWeight: "bold" }
+                    : null
+                }
+              >
+                Andrea
+              </li>
+              <li
+                style={
+                  selectedUser === 1
+                    ? { color: "red", fontWeight: "bold" }
+                    : null
+                }
+              >
+                Carlos
+              </li>
+              <li
+                style={
+                  selectedUser === 2
+                    ? { color: "red", fontWeight: "bold" }
+                    : null
+                }
+              >
+                Marcelo
+              </li>
+            </ul>
+
+            <button onClick={solveProblem}>Resolver</button>
+            <button onClick={reset}>reset</button>
+            {isOver && <p>Acabou!</p>}
+          </div>
         </div>
       </div>
-      {/* <div className="App">
-        <ul>
-         <li style={ selectedUser === 0 ? { color: 'red', fontWeight: 'bold' } : null}>Andrea</li>
-         <li style={ selectedUser === 1 ? { color: 'red', fontWeight: 'bold' } : null}>Carlos</li>
-         <li style={ selectedUser === 2 ? { color: 'red', fontWeight: 'bold' } : null}>Marcelo</li>
-       </ul>
-       <ul>
-         {
-           array.map(number => (
-             <li>
-               {number}
-             </li>
-           ))
-         }
-       </ul>
-       <button onClick={solveProblem}>
-         Resolver
-       </button>
-       <button onClick={reset}>
-         reset
-       </button>
-       {
-         isOver && <p>Acabou!</p>
-       }
-     </div> */}
     </div>
   );
 }
