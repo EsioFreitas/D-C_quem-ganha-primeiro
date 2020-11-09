@@ -10,10 +10,11 @@ li {
 
 .number-list li {
   padding: 1rem 1.5rem;
-  border: solid 3px #353535;
+  border: solid 3px #004278;
   border-radius: 50%;
   font-weight: bold;
   margin-left: 1rem;
+  color: #004278;
 }
 
 .list-users li {
@@ -23,8 +24,20 @@ li {
 }
 
 .btn {
-  background-color: red;
+  background-color: #004278;
   padding: 1rem 10rem;
   border-radius: 2rem;
-  box-shadow: none;
+  box-shadow: 1px 1px 3px #35353590 !important;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #023055;
+  box-shadow: 1px 1px 5px #353535 !important;
+  transition: all 0.5s;
 }

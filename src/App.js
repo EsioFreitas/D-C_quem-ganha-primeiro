@@ -46,7 +46,10 @@ function App() {
       <div className="container">
         <div className="text-center pt-4" style={{ color: "#353535" }}>
           <h1 className="mb-4">
-            Projeto <span className="bold-text">Viagem a Trabalho</span>{" "}
+            Projeto:{" "}
+            <span className="bold-text" style={{ color: "#004278" }}>
+              Quem ganha primeiro?
+            </span>{" "}
           </h1>
           <p>
             Andrea, Carlos e Marcelo são muito amigos e passam todos os finais
