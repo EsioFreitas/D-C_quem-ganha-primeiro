@@ -18,13 +18,15 @@ function App() {
   }, []);
 
   function solveProblem() {
+    setIsOver(true);
+
     const { trades } = mergeSort({ arr: array, count: 0, trades: [] });
     let count = 0;
     let temp = [...array];
 
     const interval = setInterval(() => {
       if (count >= trades.length) {
-        setIsOver(true);
+        setIsOver(false);
         clearInterval(interval);
       } else {
         setSelectedUser(count % 3);
@@ -36,7 +38,6 @@ function App() {
   }
 
   function reset() {
-    setIsOver(false);
     setSelectedUser(null);
     setArray(generateArray());
   }
@@ -88,8 +89,8 @@ function App() {
             <ul className="list-users d-flex justify-content-around mb-5 pb-5">
               <li
                 style={
-                  selectedUser === 0
-                    ? { color: "red", fontWeight: "bold" }
+                  selectedUser === ANDREA
+                    ? { color: " #023055", fontWeight: "bold" }
                     : null
                 }
               >
@@ -97,8 +98,8 @@ function App() {
               </li>
               <li
                 style={
-                  selectedUser === 1
-                    ? { color: "red", fontWeight: "bold" }
+                  selectedUser === CARLOS
+                    ? { color: " #023055", fontWeight: "bold" }
                     : null
                 }
               >
@@ -106,8 +107,8 @@ function App() {
               </li>
               <li
                 style={
-                  selectedUser === 2
-                    ? { color: "red", fontWeight: "bold" }
+                  selectedUser === MARCELO
+                    ? { color: " #023055", fontWeight: "bold" }
                     : null
                 }
               >
@@ -116,14 +117,17 @@ function App() {
             </ul>
 
             <div className="d-flex justify-content-center">
-              <button onClick={solveProblem} className="btn mr-5">
+              <button
+                onClick={solveProblem}
+                className="btn mr-5"
+                disabled={isOver}
+              >
                 Resolver
               </button>
-              <button onClick={reset} className="btn">
+              <button onClick={reset} className="btn" disabled={isOver}>
                 reset
               </button>
             </div>
-            {isOver && <p>Acabou!</p>}
           </div>
         </div>
       </div>
