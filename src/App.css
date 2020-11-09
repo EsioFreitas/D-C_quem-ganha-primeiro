@@ -1,0 +1,17 @@
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.number-list {
+  margin: 0;
+  padding: 0;
+}
+
+.number-list li {
+  padding: 1rem 1.5rem;
+  border: solid 3px #353535;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-left: 1rem;
+}

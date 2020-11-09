@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="bg-light" style={{ height: "100vh" }}>
       <div className="container">
-        <div className="text-center mb-5 pt-4" style={{ color: "#353535" }}>
+        <div className="text-center pt-4" style={{ color: "#353535" }}>
           <h1 className="mb-3">
             Projeto <span className="bold-text">Viagem a Trabalho</span>{" "}
           </h1>
@@ -71,9 +71,9 @@ function App() {
             </b>
           </p>
         </div>
-        <div className="row">
+        <div className="row my-5">
           <div className="col">
-            <ul>
+            <ul className="d-flex justify-content-center number-list">
               {array.map((number) => (
                 <li>{number}</li>
               ))}
