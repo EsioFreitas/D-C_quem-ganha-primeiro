@@ -42,6 +42,12 @@ function App() {
     setArray(generateArray());
   }
 
+  const selectStyle = {
+    textDecoration: "underline",
+    color: "#023055",
+    fontWeight: "bold",
+  };
+
   return (
     <div className="bg-light" style={{ height: "100vh" }}>
       <div className="container">
@@ -87,31 +93,13 @@ function App() {
         <div className="row ">
           <div className="col">
             <ul className="list-users d-flex justify-content-around mb-5 pb-5">
-              <li
-                style={
-                  selectedUser === ANDREA
-                    ? { color: " #023055", fontWeight: "bold" }
-                    : null
-                }
-              >
+              <li style={selectedUser === ANDREA ? selectStyle : null}>
                 Andrea
               </li>
-              <li
-                style={
-                  selectedUser === CARLOS
-                    ? { color: " #023055", fontWeight: "bold" }
-                    : null
-                }
-              >
+              <li style={selectedUser === CARLOS ? selectStyle : null}>
                 Carlos
               </li>
-              <li
-                style={
-                  selectedUser === MARCELO
-                    ? { color: " #023055", fontWeight: "bold" }
-                    : null
-                }
-              >
+              <li style={selectedUser === MARCELO ? selectStyle : null}>
                 Marcelo
               </li>
             </ul>
