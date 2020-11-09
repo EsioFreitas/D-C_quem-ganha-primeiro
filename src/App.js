@@ -85,7 +85,7 @@ function App() {
           <div className="col">
             <ul className="d-flex justify-content-center number-list">
               {array.map((number) => (
-                <li>{number}</li>
+                <li style={{ width: 25 + number * Math.log(number) * 1.5, height: 25 + number * Math.log(number) * 1.5 }}>{number}</li>
               ))}
             </ul>
           </div>

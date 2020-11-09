@@ -10,10 +10,14 @@ li {
 .number-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .number-list li {
-  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: solid 3px #004278;
   border-radius: 50%;
   font-weight: bold;
