@@ -1,4 +1,4 @@
-# Viagem a Negócios
+# Quem ganha primeiro?
 
 **Número da Lista**: 4<br>
 **Conteúdo da Disciplina**: Dividir para conquistar<br>
